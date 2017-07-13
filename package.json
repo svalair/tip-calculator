@@ -1,0 +1,11 @@
+{
+  "name": "tip-calculator",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/mocha": "^2.2.41",
+    "chai": "^4.1.0",
+    "mocha": "^3.4.2"
+  }
+}
