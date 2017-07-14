@@ -9,17 +9,16 @@ import {TipCalculator} from "../src/TipCalculator";
 
 describe("Basic test for TipCalculator", function () {
 
-    let t : TipCalculator;
+    let t: TipCalculator;
 
     beforeEach(function () {
-       t = new TipCalculator();
+        t = new TipCalculator();
     });
 
     afterEach(function () {
-        t = null;
     });
 
-    it("Should calculate the correct tip percentage", function() {
+    it("Should calculate the correct tip percentage", function () {
 
         let bill = 20;
         let percent = 0.15;
@@ -28,7 +27,7 @@ describe("Basic test for TipCalculator", function () {
 
     });
 
-    it("Should divide the bill evenly between guests", function() {
+    it("Should divide the bill evenly between guests", function () {
 
         let bill = 10;
         let guests = 5;
@@ -37,7 +36,7 @@ describe("Basic test for TipCalculator", function () {
 
     });
 
-    it("Should divide the tip evenly between guests", function() {
+    it("Should divide the tip evenly between guests", function () {
 
         let tip = 25;
         let guests = 2;
@@ -46,16 +45,13 @@ describe("Basic test for TipCalculator", function () {
 
     });
 
-    it("Should calculate the total bill and tip per guest", function() {
+    it("Should calculate the total bill and tip per guest", function () {
         let guests = 3;
         let bill = 87;
         let percent = 0.20;
         let totalPerGuest = t.totalPerGuest(bill, percent, guests);
         let expectedTotalPerGuest = (87 / 3) + ((87 * 0.20) / 3);
         expect(totalPerGuest).to.equal(expectedTotalPerGuest);
-    })
-
-
-
+    });
 
 });

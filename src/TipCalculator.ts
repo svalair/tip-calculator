@@ -5,28 +5,25 @@
 export class TipCalculator {
 
     constructor() {
-
     }
 
-    static calculateTip(bill: number, percent: number) : number {
+    public static calculateTip(bill: number, percent: number): number {
         return bill * percent;
-
     }
 
-    divideBill(bill: number, guests: number) : number {
+    public divideBill(bill: number, guests: number): number {
         return bill / guests;
     }
 
-    divideTip(tip: number, guests: number) : number {
+    public divideTip(tip: number, guests: number): number {
         return tip / guests;
     }
 
-    totalPerGuest(bill: number, percent: number, guests: number) : number {
+    public totalPerGuest(bill: number, percent: number, guests: number): number {
         let tip = TipCalculator.calculateTip(bill, percent);
         let tipPerGuest = this.divideTip(tip, guests);
         let billPerGuest = this.divideBill(bill, guests);
         return tipPerGuest + billPerGuest;
     }
-
 
 }
